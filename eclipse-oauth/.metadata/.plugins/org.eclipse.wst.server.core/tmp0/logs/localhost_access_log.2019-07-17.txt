@@ -1,0 +1,8 @@
+127.0.0.1 - - [17/Jul/2019:18:17:17 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [17/Jul/2019:18:36:22 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [17/Jul/2019:18:36:23 +0530] "GET /sampleServletProject/WEB-INF/classes/Hello.java HTTP/1.1" 404 1047
+127.0.0.1 - - [17/Jul/2019:18:38:36 +0530] "GET /sampleServletProject/WEB-INF/classes/Hello.java HTTP/1.1" 404 1047
+127.0.0.1 - - [17/Jul/2019:18:44:07 +0530] "GET /sampleServletProject/ HTTP/1.1" 404 1099
+127.0.0.1 - - [17/Jul/2019:18:44:34 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [17/Jul/2019:18:44:34 +0530] "GET /sampleServletProject/ HTTP/1.1" 404 1099
+127.0.0.1 - - [17/Jul/2019:18:45:03 +0530] "GET /sampleServletProject/Hello HTTP/1.1" 200 77

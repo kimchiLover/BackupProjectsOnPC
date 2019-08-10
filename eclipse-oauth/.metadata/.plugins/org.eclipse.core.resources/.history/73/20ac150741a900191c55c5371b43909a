@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Paytm Emp Portal</title>
+</head>
+<body style="background-color:DodgerBlue;">
+<center>
+<u><h1 style="color:DarkBlue;">Welcome to Paytm's Employee Management Portal</h1></u>
+</center>
+<h2>Menu</h2>
+<form action="choice">
+
+  <input type="radio" name="option" value="add">Add Employee<br>
+  <input type="radio" name="option" value="remove">Remove Employee<br>
+  <input type="radio" name="option" value="searchByName">Search Employee by Name<br>
+  <input type="radio" name="option" value="searchBySalaryRange">Search Employee by Salary Range<br>
+  <input type="submit" value="Submit">
+    
+</form>
+</body>
+</html>

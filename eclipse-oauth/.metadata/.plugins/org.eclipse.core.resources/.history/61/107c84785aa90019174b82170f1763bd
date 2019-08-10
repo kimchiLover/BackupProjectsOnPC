@@ -1,0 +1,35 @@
+package empapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class RemoveEmployeeServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	public void service(HttpServletRequest req , HttpServletResponse res) throws IOException
+    {	
+	 int empid=Integer.parseInt(req.getParameter("id"));
+   	 
+   	 EmployeeService employeeService = EmployeeServiceImpl.getInstance();
+
+   	 ifEmployeeService.removeById() 
+
+    
+
+     PrintWriter out = res.getWriter();
+     
+    if(flag == 1)
+        out.println("Employee removed.");
+    else
+        out.println("Employee not found.");
+   	 
+   	 
+   	 
+     //<a href="index.html">Go back to home</a>
+   	 
+    }
+}

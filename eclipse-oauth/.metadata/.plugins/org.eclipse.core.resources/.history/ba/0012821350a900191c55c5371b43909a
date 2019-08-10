@@ -1,0 +1,21 @@
+package empapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class AddEmployeeServlet {
+	
+	public void service(HttpServletRequest req , HttpServletResponse res) throws IOException
+    {
+   	 int empid=Integer.parseInt(req.getParameter("id"));
+   	 String empname=req.getParameter("name");
+   	 int salary=Integer.parseInt(req.getParameter("salary"));
+   	 
+   	 PrintWriter out = res.getWriter();
+   	 out.println("Employee Created.");
+    }
+
+}

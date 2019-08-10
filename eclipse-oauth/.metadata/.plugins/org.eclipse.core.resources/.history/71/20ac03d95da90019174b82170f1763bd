@@ -1,0 +1,96 @@
+package empapp;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class EmployeeServiceImpl implements  EmployeeService {
+
+    public HashSet <Employee> Emp = new HashSet <Employee>();
+	
+    private static EmployeeService employeeService = new EmployeeServiceImpl();
+
+    public static EmployeeService getInstance(){
+        return employeeService;
+    }
+
+    private EmployeeServiceImpl(){
+      
+    }
+
+    @Override
+    public boolean add(Employee e) {
+    	
+    	int a    = e.getId();
+        String b = e.getName();
+        int c   = e.getSalary();
+
+        if( Emp.add(new Employee(a, b, c)) )
+            return true;
+    	
+        return false;
+    }
+
+    @Override
+    public boolean removeById(int id) {
+    	
+        int flag=0;
+        Iterator it = Emp.iterator();
+
+        while(it.hasNext()) {
+
+            Employee d = (Employee)it.next();
+
+            if(d.getId() == id ) {
+
+                Emp.remove(d);
+                flag=1;
+                break;
+            }
+        }
+
+        if(flag == 1)
+            return true;
+    	
+        return false;
+    }
+
+    @Override
+    public Employee searchByName(String name) {
+    	
+        Iterator it = Emp.iterator();
+   
+        while (it.hasNext()) {
+
+            Employee d = (Employee) it.next();
+
+            if (d.getName().equals(name)) {
+
+                return d;
+            }
+        }
+    	
+        return null;
+    }
+    
+    @Override
+    public Employee searchBySalaryRange(int low,int high) {
+    	
+ 
+        if(s.hasNextInt()) {
+
+            Iterator it = Emp.iterator();
+
+            while (it.hasNext()) {
+
+                Employee d = (Employee) it.next();
+                int sal =d.getEmpSalary();
+
+                if (sal>=low && sal<=high) {
+                    return d;
+                    flag = 1;
+                }
+            }
+    	
+    	return null;
+    }
+}

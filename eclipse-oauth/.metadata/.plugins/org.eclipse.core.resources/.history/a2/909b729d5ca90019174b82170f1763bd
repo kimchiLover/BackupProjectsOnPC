@@ -1,0 +1,29 @@
+package empapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SearchByNameServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	public void service(HttpServletRequest req , HttpServletResponse res) throws IOException
+    {	
+   	 String empname=req.getParameter("name");
+   	 
+   	 EmployeeService employeeService = EmployeeServiceImpl.getInstance();
+
+   	 PrintWriter out = res.getWriter();
+   	 
+     if(employeeService.add(new Employee(empid,empname,salary)))
+      out.println("Employee Created.");
+   	 else
+   	  out.println("Employee already exists."); 
+     //<a href="index.html">Go back to home</a>
+   	 
+    }
+
+}

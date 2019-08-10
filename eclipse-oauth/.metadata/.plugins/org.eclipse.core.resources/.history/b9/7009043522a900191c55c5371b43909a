@@ -1,0 +1,6 @@
+package mast.amma;
+
+public class AddServlet extends Ser {
+
+	
+}

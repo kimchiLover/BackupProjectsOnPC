@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/home/ekanshgupta/eclipse-oauth/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3517937448.index
+/DemoMVC/src/main/resources

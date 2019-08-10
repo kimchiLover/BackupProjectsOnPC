@@ -1,0 +1,7 @@
+
+Jul 19, 2019 12:23:21.71 NEW SESSION
+Jul 19, 2019 12:23:21.71 [7707, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 563
+Jul 19, 2019 12:23:21.71 [7707, Main Thread] ###!!! ABORT: file resource://gre/modules/TelemetryEnvironment.jsm, line 563
+Jul 19, 2019 12:23:21.71 ExceptionHandler::GenerateDump cloned child 7928
+Jul 19, 2019 12:23:21.71 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Jul 19, 2019 12:23:21.71 ExceptionHandler::WaitForContinueSignal waiting for continue signal...

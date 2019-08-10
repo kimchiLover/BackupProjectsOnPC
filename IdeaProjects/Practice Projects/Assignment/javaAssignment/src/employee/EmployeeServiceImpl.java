@@ -1,0 +1,30 @@
+package employee;
+
+public class EmployeeServiceImpl implements  EmployeeService {
+
+
+    private static EmployeeService employeeService = new EmployeeServiceImpl();
+
+    public static EmployeeService getInstance(){
+        return employeeService;
+    }
+
+    private EmployeeServiceImpl(){
+        new EmployeeServiceImpl();
+    }
+
+    @Override
+    public boolean add(Employee e) {
+        return false;
+    }
+
+    @Override
+    public boolean removeById(int id) {
+        return false;
+    }
+
+    @Override
+    public Employee searchByName(String name) {
+        return null;
+    }
+}

@@ -1,0 +1,41 @@
+package empapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.lang3.math.NumberUtils;
+
+public class AddEmployeeServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	@SuppressWarnings("deprecation")
+	public void service(HttpServletRequest req , HttpServletResponse res) throws IOException {	
+		
+	 String a = req.getParameter("id");
+	 String b = req.getParameter("name");
+	 String c = req.getParameter("salary");
+	
+	 PrintWriter out = res.getWriter();
+	 
+	 if(NumberUtils.isNumber(a) && NumberUtils.isNumber(c)){
+	 
+	    int empid=Integer.parseInt(a);
+   	    String empname=b;
+   	    int salary=Integer.parseInt(c);
+   	 
+   	    EmployeeService employeeService = EmployeeServiceImpl.getInstance();
+   	 
+        if(employeeService.add(new Employee(empid,empname,salary)))
+        out.println("Employee Created.");
+   	    else
+   	    out.println("Employee already exists."); 
+   	 }
+	 else {
+		 out.println("Invalid Details.");
+	   }
+    }	 
+
+}

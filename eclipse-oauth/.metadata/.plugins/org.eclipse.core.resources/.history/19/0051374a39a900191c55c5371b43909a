@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Paytm Emp Portal</title>
+</head>
+<body style="background-color:powderblue;">
+
+<marquee><h1 style="color:blue;">Welcome to Paytm's Employee Management Portal</h1></marquee>
+
+</body>
+</html>

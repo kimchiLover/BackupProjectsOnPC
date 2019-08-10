@@ -1,0 +1,11 @@
+package empapp;
+
+import java.util.List;
+
+public interface EmployeeService {
+
+    boolean add (Employee e);
+    boolean removeById (int id);
+    Employee searchByName(String name);
+    List <Employee> searchBySalaryRange(int low,int high);
+}

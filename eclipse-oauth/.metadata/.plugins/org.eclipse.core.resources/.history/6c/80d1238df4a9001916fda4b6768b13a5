@@ -1,0 +1,34 @@
+package empapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SearchByNameServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	public void service(HttpServletRequest req , HttpServletResponse res) throws IOException
+   {	
+   	 String empname=req.getParameter("name");
+   	 
+   	 EmployeeService employeeService = EmployeeServiceImpl.getInstance();
+
+   	 PrintWriter out = res.getWriter();
+   	 
+   	Employee f= employeeService.searchByName(empname);
+   	 
+   	if(f.equals(null)) 
+   		out.println("Employee not found.");
+   	 else
+   	 {
+   		out.println("Employee found.");
+   	    out.println("Employee ID     :"+f.getId());
+   	    out.println("Employee Name   :"+f.getName());
+   	    out.println("Employee Salary :"+f.getSalary());
+   	  }
+   }
+
+}

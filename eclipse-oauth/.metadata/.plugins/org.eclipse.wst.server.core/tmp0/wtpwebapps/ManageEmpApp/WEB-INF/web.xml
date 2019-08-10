@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+  <servlet>
+           <servlet-name>SV1</servlet-name>
+           <servlet-class>empapp.AddEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+           <servlet-name>SV1</servlet-name>
+           <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+           <servlet-name>SV2</servlet-name>
+           <servlet-class>empapp.RemoveEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+           <servlet-name>SV2</servlet-name>
+           <url-pattern>/remove</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+           <servlet-name>SV3</servlet-name>
+           <servlet-class>empapp.SearchByNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+           <servlet-name>SV3</servlet-name>
+           <url-pattern>/searchName</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+           <servlet-name>SV4</servlet-name>
+           <servlet-class>empapp.SearchBySalaryRangeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+           <servlet-name>SV4</servlet-name>
+           <url-pattern>/searchSalary</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

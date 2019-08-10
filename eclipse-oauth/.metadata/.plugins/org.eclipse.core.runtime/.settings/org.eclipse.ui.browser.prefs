@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="1">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n<external location\="/usr/bin/google-chrome" name\="Chrome"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=https\://www.google.com/|*|https\://www.google.com|*|http\://localhost\:8080/DemoApp/|*|http\://localhost\:8080/sampleServletProject/Hello|*|http\://localhost\:8080/sampleServletProject/|*|http\://localhost\:8080/sampleServletProject/WEB-INF/classes/Hello.java|*|

@@ -1,0 +1,38 @@
+package empapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SearchBySalaryRangeServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	public void service(HttpServletRequest req , HttpServletResponse res) throws IOException
+   {	
+		int slow=Integer.parseInt(req.getParameter("name1"));
+		int shigh=Integer.parseInt(req.getParameter("name2"));
+   	 
+   	 EmployeeService employeeService = EmployeeServiceImpl.getInstance();
+
+   	 PrintWriter out = res.getWriter();
+   	 
+   	ArrayList <Employee> f= employeeService.searchBySalaryRange(slow,shigh);
+   	 
+   	if(f.equals(null)) 
+   		out.println("Employee not found.");
+   	 else
+   	 {
+   		out.println("Employee found.");
+   		
+   		
+   	    out.println("Employee ID     :"+f.getId());
+   	    out.println("Employee Name   :"+f.getName());
+   	    out.println("Employee Salary :"+f.getSalary());
+   	  }
+   }
+
+}
